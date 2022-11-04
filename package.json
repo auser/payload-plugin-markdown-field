@@ -1,6 +1,6 @@
 {
   "name": "@auser/payload-plugin-markdown-field",
-  "version": "1.0.4",
+  "version": "1.0.0",
   "description": "Payload CMS plugin to add a markdown field",
   "author": "Ari Lerner <me@ari.io>",
   "license": "MIT",

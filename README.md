@@ -22,34 +22,31 @@ Implementation:
 import { markdownField } from '@auser/payload-plugin-markdown-field'
 
 fields: [
-    phoneField(
+    markdownField(
         {
-            name: 'phone', // required
+            name: 'content', // required
         }
     )
 ]
 ```
 
-But you can also add any options that TextField accepts and any options that [PhoneNumberInput](https://catamphetamine.gitlab.io/react-phone-number-input/docs/index.html) accepts.
+You can add any options that TextField accepts and any options that [uiwjs/react-md-editor](https://github.com/uiwjs/react-md-editor) accepts.
 
-For example, add a label, required and validation plus only show 6 countries to choose from:
+For example, adding autoFocus
 
 ```js
 fields: [
- phoneField(
+ markdownField(
   {
-   name: 'phone', // required
-   label: 'Contact Phone Number',
+   name: 'content', // required
+   label: 'Content',
    required: true,
-   validate: phoneIsValid
   },
-  { countries: ['DK', 'FI', 'NO', 'SE', 'GB', 'US'] }
+  { autoFocus: true }
  )
 ]
 ```
 
-You can use your own validation function or one of the two included. You can read the rationale from [Nikolay Kuchumov](https://gitlab.com/catamphetamine/libphonenumber-js#using-phone-number-validation-feature).
+Check out [uiwjs/react-md-editor](https://github.com/uiwjs/react-md-editor) for more details.
 
-```js
-import { phoneIsValid, phoneIsPossible } from 'payload-plugin-phone-field'
-```
+## Notes
